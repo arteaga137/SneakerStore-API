@@ -1,7 +1,12 @@
 const express = require("express");
 const router = express.Router();
 //Import all controllers using destructuring
-const {getAllUsers, getUserById, addUser, deleteUser} = require("../controllers/user.controller");
+const {
+  getAllUsers,
+  getUserById,
+  addUser,
+  deleteUser,
+} = require("../controllers/user.controller");
 
 //  CRUD
 
@@ -18,7 +23,7 @@ router.post("/", async (req, res) => {
         req.body.firstName.trim(),
         req.body.lastName.trim(),
         req.body.lastName.trim(),
-        req.body.password.trim()
+        req.body.password
     );
 
     res.json({ msg: 'usuario creado correctamente'});
