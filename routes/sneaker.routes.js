@@ -24,7 +24,7 @@ router.post("/", async (req, res) => {
     req.body.model.trim(),
     req.body.colorway.trim(),
     req.body.variant.trim(),
-    req.body.size, // trim method does not work with numbers??
+    req.body.size, 
     req.body.collab.trim(),
     req.body.stock,
     req.body.price
